@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Astrologiportal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Välkommen till Min Astrologiportal</h1>
+        <nav>
+            <ul>
+                <li><a href="#om-astrologi">Om Astrologi</a></li>
+                <li><a href="#dagens-horoskop">Dagens Horoskop</a></li>
+                <li><a href="#zodiakens-tecken">Zodiakens Tecken</a></li>
+                <li><a href="#kontakta-oss">Kontakta Oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="om-astrologi">
+            <h2>Vad är Astrologi?</h2>
+            <p>Astrologi är en samling esoteriska traditioner och metoder som baseras på att studera inbördes relationer mellan astronomiska fenomen (positioner av planeter, stjärnor, etc.) och händelser på jorden, ofta med fokus på människans öde och personlighet. Det är viktigt att notera att astrologi inte är vetenskapligt bevisat.</p>
+            <p>I grunden handlar astrologi om att tolka himlakropparnas positioner vid specifika tidpunkter (som vid en persons födelse) för att få insikt om individens egenskaper, potential och livsväg. Varje planet och varje zodiaktecken sägs representera olika aspekter av personligheten och livet.</p>
+        </section>
+
+        <section id="dagens-horoskop">
+            <h2>Dagens Horoskop</h2>
+            <div class="horoscope-input">
+                <label for="sign-select">Välj ditt stjärntecken:</label>
+                <select id="sign-select">
+                    <option value="">-- Välj ett tecken --</option>
+                    <option value="Väduren">Väduren</option>
+                    <option value="Oxen">Oxen</option>
+                    <option value="Tvillingarna">Tvillingarna</option>
+                    <option value="Kräftan">Kräftan</option>
+                    <option value="Lejonet">Lejonet</option>
+                    <option value="Jungfrun">Jungfrun</option>
+                    <option value="Vågen">Vågen</option>
+                    <option value="Skorpionen">Skorpionen</option>
+                    <option value="Skytten">Skytten</option>
+                    <option value="Stenbocken">Stenbocken</option>
+                    <option value="Vattumannen">Vattumannen</option>
+                    <option value="Fiskarna">Fiskarna</option>
+                </select>
+                <button id="get-horoscope-btn">Visa Horoskop</button>
+            </div>
+            <div id="horoscope-result" class="hidden">
+                <h3>Ditt Horoskop för <span id="selected-sign"></span>:</h3>
+                <p id="horoscope-text"></p>
+            </div>
+        </section>
+
+        <section id="zodiakens-tecken">
+            <h2>Zodiakens Tecken</h2>
+            <div class="zodiac-grid">
+                <div class="zodiac-card" data-sign="Väduren">
+                    <h3>Väduren</h3>
+                    <p>21 mars - 19 april</p>
+                    <p>Element: Eld</p>
+                </div>
+                <div class="zodiac-card" data-sign="Oxen">
+                    <h3>Oxen</h3>
+                    <p>20 april - 20 maj</p>
+                    <p>Element: Jord</p>
+                </div>
+                <div class="zodiac-card" data-sign="Tvillingarna">
+                    <h3>Tvillingarna</h3>
+                    <p>21 maj - 20 juni</p>
+                    <p>Element: Luft</p>
+                </div>
+                <div class="zodiac-card" data-sign="Kräftan">
+                    <h3>Kräftan</h3>
+                    <p>21 juni - 22 juli</p>
+                    <p>Element: Vatten</p>
+                </div>
+                <div class="zodiac-card" data-sign="Lejonet">
+                    <h3>Lejonet</h3>
+                    <p>23 juli - 22 augusti</p>
+                    <p>Element: Eld</p>
+                </div>
+                <div class="zodiac-card" data-sign="Jungfrun">
+                    <h3>Jungfrun</h3>
+                    <p>23 augusti - 22 september</p>
+                    <p>Element: Jord</p>
+                </div>
+                <div class="zodiac-card" data-sign="Vågen">
+                    <h3>Vågen</h3>
+                    <p>23 september - 22 oktober</p>
+                    <p>Element: Luft</p>
+                </div>
+                <div class="zodiac-card" data-sign="Skorpionen">
+                    <h3>Skorpionen</h3>
+                    <p>23 oktober - 21 november</p>
+                    <p>Element: Vatten</p>
+                </div>
+                <div class="zodiac-card" data-sign="Skytten">
+                    <h3>Skytten</h3>
+                    <p>22 november - 21 december</p>
+                    <p>Element: Eld</p>
+                </div>
+                <div class="zodiac-card" data-sign="Stenbocken">
+                    <h3>Stenbocken</h3>
+                    <p>22 december - 19 januari</p>
+                    <p>Element: Jord</p>
+                </div>
+                <div class="zodiac-card" data-sign="Vattumannen">
+                    <h3>Vattumannen</h3>
+                    <p>20 januari - 18 februari</p>
+                    <p>Element: Luft</p>
+                </div>
+                <div class="zodiac-card" data-sign="Fiskarna">
+                    <h3>Fiskarna</h3>
+                    <p>19 februari - 20 mars</p>
+                    <p>Element: Vatten</p>
+                </div>
+            </div>
+            <div id="zodiac-details" class="hidden">
+                <h3>Mer om <span id="zodiac-detail-sign"></span></h3>
+                <p id="zodiac-detail-description"></p>
+                <button id="close-zodiac-details">Stäng</button>
+            </div>
+        </section>
+
+        <section id="kontakta-oss">
+            <h2>Kontakta Oss</h2>
+            <p>Har du frågor om astrologi eller feedback på vår hemsida? Fyll i formuläret nedan!</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Skicka Meddelande</button>
+            </form>
+            <p id="contact-message" class="hidden"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Min Astrologiportal. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
